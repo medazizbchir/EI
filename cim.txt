@@ -1,26 +1,31 @@
-C19: Tumeur maligne de la jonction rectosigmoïdienne.
+
 F023: Démence vasculaire.
 G20: Maladie de Parkinson.
-C34: Tumeur maligne des bronches et du poumon.
-Z803: Antécédents familiaux de tumeur maligne du sein.
+I13: Maladie cardiaque et rénale hypertensive.
+I12: Néphropathie hypertensive.
+I15: Hypertension secondaire.
+Z716: Conseil pour tabagisme.
+B22: Maladie à VIH entraînant d'autres maladies spécifiées.
+B21: Maladie à VIH entraînant des tumeurs malignes.
+C19: Tumeur maligne de la jonction rectosigmoïdienne.
+
+Facteurs de risques:
+Z587: Exposition à la fumée du tabac.
 Z720: Usage de tabac.
+T51: Effets toxiques de l'alcool.
+K70: Maladie alcoolique du foie.
+F10: Troubles mentaux et du comportement liés à l'utilisation d'alcool.
+Z803: Antécédents familiaux de tumeur maligne du sein.
+E10: Diabète sucré de type 1.
+E11: Diabète sucré de type 2.
+Z864: Antécédents personnels d'abus de substances psychoactives.
+E12: Diabète sucré de malnutrition
+
+CIM_ cancer:
 C504: Tumeur maligne du quadrant supéro-externe du sein
 C50: Tumeur maligne du sein.
 C502: Tumeur maligne du quadrant supéro-interne du sein.
 C500: Tumeur maligne du mamelon et de l'aréole du sein.
 C501: Tumeur maligne de la partie centrale du sein
 C503: Tumeur maligne du quadrant inféro-interne du sein
-K70: Maladie alcoolique du foie.
-F10: Troubles mentaux et du comportement liés à l'utilisation d'alcool.
-Z587: Exposition à la fumée du tabac.
-T51: Effets toxiques de l'alcool.
-Z864: Antécédents personnels d'abus de substances psychoactives.
-E10: Diabète sucré de type 1.
-E12: Diabète sucré de malnutrition
-I13: Maladie cardiaque et rénale hypertensive.
-I12: Néphropathie hypertensive.
-I15: Hypertension secondaire.
-E11: Diabète sucré de type 2.
-Z716: Conseil pour tabagisme.
-B22: Maladie à VIH entraînant d'autres maladies spécifiées.
-B21: Maladie à VIH entraînant des tumeurs malignes.
+C34: Tumeur maligne des bronches et du poumon.
