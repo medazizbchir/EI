@@ -9,6 +9,10 @@ alt.data_transformers.enable('default', max_rows=None)
 # Dates management
 import datetime
 
+cancer_condition = {'C50','C500','C501','C502','C503','C504'}
+risk_factors = {'Tabac':['Z587','Z720'], 'Alcool':['T51','K70','F10'], 'Diabete':['E10','E11','E12'], 'sub_psy':['Z864'], 'tum_herit':['Z803']}
+
+
 def hist_risk_factors(dict, df_cancer_hist, df_person_hist, df_condition_hist, nbre_patients_cancer_hist):
     
     mask = df_condition_hist.apply(tuple,1).isin(df_cancer_hist.apply(tuple,1))
@@ -39,8 +43,6 @@ def hist_risk_factors(dict, df_cancer_hist, df_person_hist, df_condition_hist, n
     data2 ={ 'Catégorie': list(dict.keys()),
              'Pourcentage': l2}
     
-
-
     categories = data1['Catégorie']
     pourcentages1 = data1['Pourcentage']
     pourcentages2 = data2['Pourcentage']
