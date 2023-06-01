@@ -9,8 +9,8 @@ alt.data_transformers.enable('default', max_rows=None)
 # Dates management
 import datetime
 
-cancer_condition = {'C50','C500','C501','C502','C503','C504'}
-risk_factors = {'tabac':['Z587','Z720'], 'alcool':['T51','K70','F10'], 'diabete':['E10','E11','E12'], 'sub_psy':['Z864'], 'tum_herit':['Z803']}
+from dedup_proba import risk_factors
+from dedup_proba import cancer_condition
 
 
 def hist_risk_factors(dict, df_cancer_hist, df_person_hist, df_condition_hist, nbre_patients_cancer_hist):
