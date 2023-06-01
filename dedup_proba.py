@@ -31,6 +31,6 @@ def deduplicate_proba(df_person: pd.DataFrame, df_dedup_proba: pd.DataFrame, sco
 
 df_person_dedup_proba = deduplicate_proba(df_person, df_dedup_proba, score=0.90)
 df_condition_dedup_proba = df_condition.merge(df_person_dedup_proba[['person_id']], on='person_id', how='inner')
-df_visit_dedup_proba = df_visit.merge(df_person_dedup_proba[['person_id']], on='person_id', how='left')
+df_visit_dedup_proba = df_visit.merge(df_person_dedup_proba[['person_id']], on='person_id', how='inner')
 df_cancer_dedup_proba = df_condition_dedup_proba[df_condition_dedup_proba['condition_source_value'].isin(cancer_condition)]
 nbre_patients_cancer_dedup_proba = df_cancer_dedup_proba.person_id.nunique()
