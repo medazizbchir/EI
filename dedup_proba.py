@@ -14,6 +14,8 @@ df_person = pd.read_pickle('data/df_person.pkl')
 df_visit = pd.read_pickle('data/df_visit.pkl')
 df_condition = pd.read_pickle('data/df_condition.pkl')
 df_dedup_proba = pd.read_pickle('data/df_dedup_proba.pkl')
+df_note = pd.read_pickle('data/df_note.pkl')
+df_bio = pd.read_pickle('data/df_bio.pkl')
 
 df_person['gender_source_value'] = df_person['gender_source_value'].replace(['female', 'f'], 'f')
 df_person['gender_source_value'] = df_person['gender_source_value'].replace(['male', 'm'], 'm')
@@ -32,5 +34,6 @@ def deduplicate_proba(df_person: pd.DataFrame, df_dedup_proba: pd.DataFrame, sco
 df_person_dedup_proba = deduplicate_proba(df_person, df_dedup_proba, score=0.90)
 df_condition_dedup_proba = df_condition[df_condition.person_id.isin(df_person_dedup_proba.person_id)]
 df_visit_dedup_proba = df_visit[df_visit.person_id.isin(df_person_dedup_proba.person_id)]
+df_note_dedup_proba = df_note[df_note.visit_occurrence_id.isin(df_visit_dedup_proba.visit_occurrence_id)]
 df_cancer_dedup_proba = df_condition_dedup_proba[df_condition_dedup_proba['condition_source_value'].isin(cancer_condition)]
 nbre_patients_cancer_dedup_proba = df_cancer_dedup_proba.person_id.nunique()
