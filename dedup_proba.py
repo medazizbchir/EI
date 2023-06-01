@@ -35,5 +35,6 @@ df_person_dedup_proba = deduplicate_proba(df_person, df_dedup_proba, score=0.90)
 df_condition_dedup_proba = df_condition[df_condition.person_id.isin(df_person_dedup_proba.person_id)]
 df_visit_dedup_proba = df_visit[df_visit.person_id.isin(df_person_dedup_proba.person_id)]
 df_note_dedup_proba = df_note[df_note.visit_occurrence_id.isin(df_visit_dedup_proba.visit_occurrence_id)]
+df_bio_dedup_proba = df_bio[df_bio.visit_occurrence_id.isin(df_visit_dedup_proba.visit_occurrence_id)]
 df_cancer_dedup_proba = df_condition_dedup_proba[df_condition_dedup_proba['condition_source_value'].isin(cancer_condition)]
 nbre_patients_cancer_dedup_proba = df_cancer_dedup_proba.person_id.nunique()
